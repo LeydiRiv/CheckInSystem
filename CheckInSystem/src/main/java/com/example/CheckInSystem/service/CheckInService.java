@@ -3,9 +3,9 @@ package com.example.CheckInSystem.service;
 //package com.example.check_in_check_out_system.service;
 
 import com.example.CheckInSystem.model.CheckIn;
-import com.example.EmployeeSystem.model.Employee;
+import com.example.CheckInSystem.model.Employee;
 import com.example.CheckInSystem.repository.CheckinRepository;
-import com.example.EmployeeSystem.repository.EmployeeRepository;
+import com.example.CheckInSystem.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

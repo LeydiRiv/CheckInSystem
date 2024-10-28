@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 
+
 //This can handle HTTP requests and return responses in JSON format
 @RestController
 @RequestMapping("/api/v1/checkins")
@@ -21,6 +22,7 @@ public class CheckInController {
     @Autowired
     private CheckInService checkInService;
 
+    //http://localhost:8082/api/v1/checkins
     //Check-in
     @PostMapping("/{employeeId}")
     public ResponseEntity<CheckIn> checkIn(@PathVariable Long employeeId) {
@@ -28,6 +30,7 @@ public class CheckInController {
         return new ResponseEntity<>(checkIn, HttpStatus.CREATED);
     }
 
+    //http://localhost:8082/api/v1/checkins/9
     //Check-out
     @PutMapping("/checkout/{checkInId}")
     public ResponseEntity<CheckIn> checkOut(@PathVariable Long checkInId) {
@@ -35,6 +38,7 @@ public class CheckInController {
         return ResponseEntity.ok(checkIn);
     }
 
+    //http://localhost:8082/api/v1/checkins/checkout/20
     //Get
     @GetMapping
     public ResponseEntity<List<CheckIn>> getAllCheckIns() {
@@ -42,6 +46,7 @@ public class CheckInController {
         return ResponseEntity.ok(checkIns);
     }
 
+    //http://localhost:8082/api/v1/checkins/20
     //Delete
     @DeleteMapping("/{checkInId}")
     public ResponseEntity<Void> deleteCheckIn(@PathVariable Long checkInId) {
