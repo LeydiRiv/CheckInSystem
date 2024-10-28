@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 
+
 //This can handle HTTP requests and return responses in JSON format
 @RestController
 @RequestMapping("/api/v1/checkins")
